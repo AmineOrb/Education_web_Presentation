@@ -198,8 +198,8 @@ html[data-active-lang="ar"] span[data-lang="ar"]{display:inline;}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
 .brand{display:flex;align-items:center;gap:12px;font-family:'Poppins',sans-serif;font-weight:700;font-size:1.15rem;color:var(--white);transition:color .4s var(--ease);}
 #navbar.scrolled .brand{color:var(--navy);}
-.brand-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--royal));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.brand-mark svg{width:20px;height:20px;}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;}
+.brand-mark img{width:100%;height:100%;object-fit:contain;display:block;border-radius:inherit;}
 .nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0;}
 .nav-links a{
   color:rgba(255,255,255,0.88);font-weight:500;font-size:.95rem;position:relative;padding:4px 0;transition:color .3s;
