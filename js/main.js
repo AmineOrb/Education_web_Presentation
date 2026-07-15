@@ -191,6 +191,46 @@
     window.scrollTo({ top: y, behavior: "smooth" });
   });
 
+  /* ---------------- Map controls ---------------- */
+  var mapBox = document.querySelector('[data-map-box]');
+  var mapFrame = document.getElementById('location-map');
+  var mapZoomInput = document.querySelector('[data-map-zoom]');
+  var mapModeSelect = document.querySelector('[data-map-mode-select]');
+  var mapState = { mode: 'roadmap', zoom: 16 };
+
+  function getMapModeCode(mode) {
+    if (mode === 'satellite') return 's';
+    if (mode === 'hybrid') return 'h';
+    return 'm';
+  }
+
+  function buildMapSrc() {
+    return 'https://www.google.com/maps?q=36.7222392,3.0315218&z=' + mapState.zoom + '&t=' + getMapModeCode(mapState.mode) + '&output=embed';
+  }
+
+  function updateLocationMap() {
+    if (!mapFrame) return;
+    mapFrame.src = buildMapSrc();
+  }
+
+  if (mapBox) {
+    if (mapZoomInput) {
+      mapZoomInput.addEventListener('input', function () {
+        mapState.zoom = parseInt(mapZoomInput.value, 10);
+        updateLocationMap();
+      });
+    }
+
+    if (mapModeSelect) {
+      mapModeSelect.addEventListener('change', function () {
+        mapState.mode = mapModeSelect.value;
+        updateLocationMap();
+      });
+    }
+
+    updateLocationMap();
+  }
+
   /* ---------------- Dark mode toggle ---------------- */
   function getTheme() {
     var t = localStorage.getItem('ec-theme');
