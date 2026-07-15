@@ -93,11 +93,11 @@
         </div>
         <div class="contact-line">
           <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
-          <div><strong>Email</strong><span>careers@educationcity-dz.com</span></div>
+          <div><strong>Email</strong><span>admin@educationcity-dz.com</span></div>
         </div>
         <div class="contact-line">
           <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><strong><span data-lang="fr">Localisation</span><span data-lang="en">Location</span><span data-lang="ar">الموقع</span></strong><span><span data-lang="fr">Birkhadem, Alger, Algérie</span><span data-lang="en">Algiers, Algeria</span><span data-lang="ar">الجزائر العاصمة، الجزائر</span></span></div>
+          <div><strong><span data-lang="fr">Localisation</span><span data-lang="en">Location</span><span data-lang="ar">الموقع</span></strong><span><span data-lang="fr">Birkhadem, Alger, Algérie</span><span data-lang="en">Birkhadem, Alger, Algeria</span><span data-lang="ar">الجزائر العاصمة، الجزائر</span></span></div>
         </div>
 
 
@@ -122,38 +122,78 @@
       <div class="form-card reveal">
         <h3><span data-lang="fr">Déposer votre candidature</span><span data-lang="en">Apply now</span><span data-lang="ar">قدّم طلبك</span></h3>
         <p><span data-lang="fr">Renseignez vos coordonnées, joignez votre CV et expliquez votre motivation.</span><span data-lang="en">Share your details, attach your CV and explain your motivation.</span><span data-lang="ar">أدخل بياناتك وأرفق سيرة ذاتية الخاصة بك ووضح دافعك.</span></p>
-
-        <form data-form>
+        <!--
+        <form data-form action="https://formgrid.dev/api/f/eszko6ui" method="POST" enctype="multipart/form-data">
           <div class="form-row">
             <div class="field">
               <label><span data-lang="fr">Nom complet</span><span data-lang="en">Full Name</span><span data-lang="ar">الاسم الكامل</span></label>
-              <input type="text" required>
+              <input type="text" name="name" required>
             </div>
             <div class="field">
               <label><span data-lang="fr">Téléphone</span><span data-lang="en">Phone Number</span><span data-lang="ar">رقم الهاتف</span></label>
-              <input type="tel" required>
+              <input type="tel" name="phone" required>
             </div>
           </div>
           <div class="field">
             <label>Email</label>
-            <input type="email" required>
+            <input type="email" name="email" required>
           </div>
           <div class="field">
             <label><span data-lang="fr">Poste souhaité</span><span data-lang="en">Desired Position</span><span data-lang="ar">الوظيفة المطلوبة</span></label>
-            <input type="text" required>
+            <input type="text" name="position" required>
           </div>
           <div class="field">
             <label><span data-lang="fr">Téléverser votre CV</span><span data-lang="en">Upload your CV</span><span data-lang="ar">رفع سيرتك الذاتية</span></label>
-            <input type="file" accept=".pdf,.doc,.docx" required>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
           </div>
           <div class="field">
             <label><span data-lang="fr">Message</span><span data-lang="en">Message</span><span data-lang="ar">الرسالة</span></label>
-            <textarea required></textarea>
+            <textarea name="message" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%">
             <span data-lang="fr">Envoyer la candidature</span><span data-lang="en">Send application</span><span data-lang="ar">إرسال التقديم</span>
           </button>
         </form>
+
+        -->
+       <form action="https://formspree.io/f/mdaqkvrz" method="POST">
+  <div class="form-row">
+    <div class="field">
+      <label><span data-lang="fr">Nom complet</span><span data-lang="en">Full Name</span><span data-lang="ar">الاسم الكامل</span></label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="field">
+      <label><span data-lang="fr">Téléphone</span><span data-lang="en">Phone Number</span><span data-lang="ar">رقم الهاتف</span></label>
+      <input type="tel" name="phone" required>
+    </div>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input type="email" name="_replyto" required>
+  </div>
+  <div class="field">
+    <label><span data-lang="fr">Poste souhaité</span><span data-lang="en">Desired Position</span><span data-lang="ar">الوظيفة المطلوبة</span></label>
+    <input type="text" name="position" required>
+  </div>
+  <div class="field">
+    <label><span data-lang="fr">Lettre de motivation</span><span data-lang="en">Cover Letter</span><span data-lang="ar">رسالة تحفيزية</span></label>
+    <textarea name="cover_letter" rows="6" placeholder="..." required></textarea>
+  </div>
+  
+  <div style="background:#f0f7ff;padding:15px;border-radius:8px;margin-bottom:20px;border-left:4px solid #1E4DB7;">
+    <p style="font-size:0.9rem;margin:0;color:#1E4DB7;">
+      <strong>💡 <span data-lang="fr">Important</span><span data-lang="en">Important</span><span data-lang="ar">مهم</span> :</strong>
+      <span data-lang="fr">Veuillez envoyer votre CV par email à <strong>admin@educationcity-dz.com</strong> après avoir soumis ce formulaire.</span>
+      <span data-lang="en">Please send your CV by email to <strong>admin@educationcity-dz.com</strong> after submitting this form.</span>
+      <span data-lang="ar">يرجى إرسال سيرتك الذاتية عبر البريد الإلكتروني إلى <strong>admin@educationcity-dz.com</strong> بعد تقديم هذا النموذج.</span>
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width:100%">
+    <span data-lang="fr">Envoyer la candidature</span><span data-lang="en">Send application</span><span data-lang="ar">إرسال التقديم</span>
+  </button>
+</form>
+
+
         <div class="form-success">
           <svg viewBox="0 0 24 24" fill="none" stroke="#25693B" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
           <span>

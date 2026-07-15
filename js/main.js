@@ -163,18 +163,25 @@
   /* ---------------- Forms ---------------- */
   document.querySelectorAll("form[data-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
-      e.preventDefault();
       var success = form.parentElement.querySelector(".form-success");
       var btn = form.querySelector("button[type=submit]");
+      var originalText = btn ? btn.innerHTML : "";
+
       if (btn) {
-        var original = btn.textContent;
         btn.disabled = true;
-        setTimeout(function () {
-          btn.disabled = false;
-          if (success) success.classList.add("show");
-          form.reset();
-        }, 700);
+        btn.innerHTML = '<span data-lang="fr">Envoi en cours...</span><span data-lang="en">Sending...</span><span data-lang="ar">إرسال...</span>';
       }
+
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+        }
+        return;
+      }
+
+      if (success) success.classList.remove("show");
     });
   });
 
