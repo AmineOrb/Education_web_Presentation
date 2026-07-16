@@ -11,8 +11,10 @@
   --gold-soft:#E8CE7C;
   --white:#FFFFFF;
   --light:#F7F9FC;
-  --text:#222222;
+  --text:#111111;
   --text-muted:#5B6472;
+  --footer-heading:#FFFFFF;
+  --footer-text:rgba(255,255,255,0.72);
   --line:#E7EBF2;
   --radius-lg:26px;
   --radius-md:18px;
@@ -34,8 +36,10 @@ html[data-theme="dark"]{
   --gold-soft:#E8CE7C;
   --white:#071026;
   --light:#0D1A2E;
-  --text:#F4F7FF;
-  --text-muted:rgba(244,247,255,0.82);
+  --text:#F7F1E6;
+  --text-muted:#F0E6C8;
+  --footer-heading:#0B1F3A;
+  --footer-text:#2C5EB8;
   --line:rgba(255,255,255,0.12);
   --shadow-sm:0 6px 24px rgba(0,0,0,0.55);
   --shadow-md:0 18px 60px rgba(0,0,0,0.65);
@@ -57,20 +61,37 @@ html[data-theme="dark"] #navbar.scrolled{
 }
 html[data-theme="dark"] #navbar .brand,
 html[data-theme="dark"] #navbar .nav-links a,
-html[data-theme="dark"] #navbar .lang-switch button,
-html[data-theme="dark"] #navbar .btn-call,
+html[data-theme="dark"] #navbar .lang-switch button:not(.active),
 html[data-theme="dark"] #navbar .nav-toggle span{
-  color:var(--white);
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] #navbar.scrolled .brand,
+html[data-theme="dark"] #navbar.scrolled .nav-links a,
+html[data-theme="dark"] #navbar.scrolled .lang-switch button:not(.active){
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] #navbar .btn-call,
+html[data-theme="dark"] #navbar.scrolled .btn-call{
+  color:#071026 !important;
+}
+html[data-theme="dark"] #navbar .lang-switch button.active,
+html[data-theme="dark"] #navbar.scrolled .lang-switch button.active{
+  background:var(--gold) !important;
+  color:#071026 !important;
 }
 html[data-theme="dark"] #navbar .lang-switch{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.14);}
-html[data-theme="dark"] #navbar .nav-toggle span{background:var(--white);}
+html[data-theme="dark"] #navbar .nav-toggle span{background:#FFFFFF;}
 html[data-theme="dark"] .btn-call{color:var(--navy);}
 html[data-theme="dark"] #navbar .nav-links a:hover{color:var(--gold-soft);}
-html[data-theme="dark"] footer{background:var(--navy);}
-html[data-theme="dark"] footer .footer-grid{border-bottom-color:rgba(255,255,255,0.12);}
+html[data-theme="dark"] footer{background:#050E1E !important;}
+html[data-theme="dark"] footer .footer-grid{border-bottom-color:rgba(255,255,255,0.08) !important;}
+html[data-theme="dark"] footer .footer-brand .brand{color:#FFFFFF !important;}
+html[data-theme="dark"] footer h4{color:var(--gold-soft) !important;}
 html[data-theme="dark"] footer .footer-brand p,
-html[data-theme="dark"] footer .flinks a,
-html[data-theme="dark"] .footer-bottom{color:rgba(255,255,255,0.78);}
+html[data-theme="dark"] footer .flinks a{color:rgba(255,255,255,0.7) !important;}
+html[data-theme="dark"] .footer-bottom{color:rgba(255,255,255,0.45) !important;}
+html[data-theme="dark"] footer .flinks a:hover,
+html[data-theme="dark"] .footer-bottom a:hover{color:var(--gold-soft) !important;}
 html[data-theme="dark"] h1,
 html[data-theme="dark"] h2,
 html[data-theme="dark"] h3,
@@ -82,7 +103,7 @@ html[data-theme="dark"] .testi-person strong,
 html[data-theme="dark"] .audience-cta,
 html[data-theme="dark"] .pill,
 html[data-theme="dark"] .side-card .row span:last-child,
-html[data-theme="dark"] .logo-strip .lg{color:var(--white);}
+html[data-theme="dark"] .logo-strip .lg{color:var(--text);}
 html[data-theme="dark"] p,
 html[data-theme="dark"] .lead,
 html[data-theme="dark"] .section-head p,
@@ -96,14 +117,14 @@ html[data-theme="dark"] .audience-card ul li,
 html[data-theme="dark"] .side-card .row span:first-child,
 html[data-theme="dark"] .benefit-card,
 html[data-theme="dark"] .form-card,
-html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .contact-info-card,
 html[data-theme="dark"] .course-card,
 html[data-theme="dark"] .about-badge-card,
 html[data-theme="dark"] .testi-card,
 html[data-theme="dark"] .audience-card,
 html[data-theme="dark"] .side-card,
 html[data-theme="dark"] .service-card{
-  color:rgba(244,247,255,0.9);
+  color:var(--text-muted);
 }
 html[data-theme="dark"] .course-card,
 html[data-theme="dark"] .about-badge-card,
@@ -112,8 +133,70 @@ html[data-theme="dark"] .audience-card,
 html[data-theme="dark"] .side-card,
 html[data-theme="dark"] .service-card,
 html[data-theme="dark"] .form-card,
-html[data-theme="dark"] .contact-card{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);}
+html[data-theme="dark"] .contact-info-card{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.08);}
+html[data-theme="dark"] .contact-info-card h3,
+html[data-theme="dark"] .contact-info-card h4,
+html[data-theme="dark"] .contact-info-card strong{
+  color:var(--text);
+}
 html[data-theme="dark"] .btn-call .theme-ico{margin-inline-end:8px;}
+
+/* Premium Button Contrast Overrides */
+html[data-theme="dark"] .btn-primary{
+  color:#0B1F3A !important;
+}
+html[data-theme="dark"] .btn-secondary{
+  color:#FFFFFF !important;
+  border-color:rgba(255,255,255,0.4) !important;
+  background:rgba(255,255,255,0.08) !important;
+}
+html[data-theme="dark"] .btn-secondary:hover{
+  background:rgba(255,255,255,0.18) !important;
+}
+
+/* Premium Dark Mode Hero Overrides */
+html[data-theme="dark"] .hero{
+  background:linear-gradient(160deg,#071026 0%,#0A1B32 45%,#1E4DB7 130%) !important;
+}
+html[data-theme="dark"] .hero h1{
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] .hero p.lead{
+  color:rgba(255,255,255,0.85) !important;
+}
+html[data-theme="dark"] .hero-meta-item .label{
+  color:rgba(255,255,255,0.6) !important;
+}
+html[data-theme="dark"] .hero-meta-item .value{
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] .scroll-indicator{
+  color:rgba(255,255,255,0.6) !important;
+}
+html[data-theme="dark"] .page-hero{
+  background:linear-gradient(160deg,#071026,#0A1B32) !important;
+}
+html[data-theme="dark"] .page-hero h1{
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] .page-hero p{
+  color:rgba(255,255,255,0.75) !important;
+}
+html[data-theme="dark"] .breadcrumb{
+  color:rgba(255,255,255,0.55) !important;
+}
+html[data-theme="dark"] .breadcrumb a{
+  color:var(--gold-soft) !important;
+}
+
+/* Soft Dimming for Images in Dark Mode */
+html[data-theme="dark"] img{
+  opacity:0.88;
+  transition:opacity 0.3s ease;
+}
+html[data-theme="dark"] img:hover{
+  opacity:1;
+}
 
 /* Dark mode toggle button (navbar) */
 .btn-toggle{
@@ -788,15 +871,15 @@ html[dir="rtl"] .card-link svg {
 /* ==========================================================================
    Footer
    ========================================================================== */
-footer{background:var(--navy);color:rgba(255,255,255,0.7);padding-top:90px;position:relative;}
+footer{background:var(--navy);color:var(--footer-text);padding-top:90px;position:relative;}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.1);}
-.footer-brand .brand{color:var(--white);margin-bottom:16px;}
-.footer-brand p{color:rgba(255,255,255,0.55);font-size:.92rem;max-width:280px;}
-footer h4{color:var(--white);font-size:.9rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:22px;}
+.footer-brand .brand{color:var(--footer-heading);margin-bottom:16px;}
+.footer-brand p{color:var(--footer-text);font-size:.92rem;max-width:280px;}
+footer h4{color:var(--footer-heading);font-size:.9rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:22px;}
 footer .flinks li{margin-bottom:13px;}
-footer .flinks a{font-size:.92rem;color:rgba(255,255,255,0.62);transition:color .3s;}
+footer .flinks a{font-size:.92rem;color:var(--footer-text);transition:color .3s;}
 footer .flinks a:hover{color:var(--gold-soft);}
-.footer-bottom{padding:26px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.85rem;color:rgba(255,255,255,0.45);}
+.footer-bottom{padding:26px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--footer-text);}
 .footer-bottom .flinks{display:flex;gap:22px;}
 .footer-bottom a:hover{color:var(--gold-soft);}
 #back-to-top{
