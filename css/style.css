@@ -189,6 +189,22 @@ html[data-theme="dark"] .breadcrumb a{
   color:var(--gold-soft) !important;
 }
 
+/* Premium CTA Banner Contrast Overrides */
+html[data-theme="dark"] .cta-banner{
+  background:linear-gradient(135deg,#071026 0%,#0A1B32 100%) !important;
+}
+html[data-theme="dark"] .cta-banner h2{
+  color:#FFFFFF !important;
+}
+html[data-theme="dark"] .cta-banner p{
+  color:rgba(255,255,255,0.85) !important;
+}
+
+/* Back to Top contrast in Dark Mode */
+html[data-theme="dark"] #back-to-top svg{
+  color:#0B1F3A !important;
+}
+
 /* Soft Dimming for Images in Dark Mode */
 html[data-theme="dark"] img{
   opacity:0.88;
