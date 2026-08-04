@@ -28,6 +28,38 @@
         // ignore malformed titles
       }
     });
+    if (typeof renderTrainingCategoryCard === "function") renderTrainingCategoryCard();
+  }
+
+  function renderTrainingCategoryCard() {
+    var card = document.getElementById("category-detail-card");
+    var titleEl = document.getElementById("category-card-title");
+    var descEl = document.getElementById("category-card-desc");
+    if (!card || !titleEl || !descEl) return;
+
+    var activeBtn = document.querySelector(".pill-selectable.active");
+    if (!activeBtn) return;
+
+    var lang = getLang();
+    var title = activeBtn.getAttribute("data-title-" + lang) || activeBtn.getAttribute("data-title-fr");
+    var desc = activeBtn.getAttribute("data-desc-" + lang) || activeBtn.getAttribute("data-desc-fr");
+
+    titleEl.textContent = title || "";
+    descEl.textContent = desc || "";
+    card.style.display = "block";
+  }
+
+  function initTrainingCategoryCards() {
+    document.querySelectorAll(".pill-selectable").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll(".pill-selectable").forEach(function (other) {
+          other.classList.remove("active");
+        });
+        btn.classList.add("active");
+        renderTrainingCategoryCard();
+      });
+    });
+    renderTrainingCategoryCard();
   }
 
   function initLangSwitch() {
@@ -37,6 +69,7 @@
       });
     });
     applyLang(getLang());
+    initTrainingCategoryCards();
   }
 
   /* ---------------- Loader ---------------- */

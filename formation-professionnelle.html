@@ -83,18 +83,44 @@
       <div data-lang="ar"><p>تجمع برامج التكوين المهني لدينا بين الخبرة الأكاديمية والممارسة الميدانية. يتم تنظيم كل مسار في وحدات قصيرة ومركزة لإحداث تغيير ملموس منذ الأسابيع الأولى، سواء في القيادة أو التواصل أو إتقان الأدوات الرقمية.</p></div>
 
       <div class="eyebrow" style="margin-top:36px"><span data-lang="fr">Catégories de formation</span><span data-lang="en">Training Categories</span><span data-lang="ar">فئات التكوين</span></div>
-      <div class="pill-list">
-        <span class="pill"><span data-lang="fr">IT</span><span data-lang="en">IT</span><span data-lang="ar">تقنيات المعلومات</span></span>
-        <span class="pill"><span data-lang="fr">Marketing</span><span data-lang="en">Marketing</span><span data-lang="ar">التسويق</span></span>
-        <span class="pill"><span data-lang="fr">Digital Marketing</span><span data-lang="en">Digital Marketing</span><span data-lang="ar">التسويق الرقمي</span></span>
-        <span class="pill"><span data-lang="fr">Import / export</span><span data-lang="en">Import / export</span><span data-lang="ar">الاستيراد/التصدير</span></span>
-        <span class="pill"><span data-lang="fr">Business Development</span><span data-lang="en">Business Development</span><span data-lang="ar">تنمية الأعمال</span></span>
-        <span class="pill"><span data-lang="fr">HR</span><span data-lang="en">HR</span><span data-lang="ar">الموارد البشرية</span></span>
-        <span class="pill"><span data-lang="fr">Supply chain</span><span data-lang="en">Supply chain</span><span data-lang="ar">سلسلة الإمداد</span></span>
-        <span class="pill"><span data-lang="fr">Administration &amp; Secretary</span><span data-lang="en">Administration & Secretary</span><span data-lang="ar">الإدارة والأمانة</span></span>
-        <span class="pill"><span data-lang="fr">AI</span><span data-lang="en">AI</span><span data-lang="ar">الذكاء الاصطناعي</span></span>
-        <span class="pill"><span data-lang="fr">Education training (teacher training)</span><span data-lang="en">Education training (teacher training)</span><span data-lang="ar">تكوين تربوي (تكوين المعلمين)</span></span>
-        <span class="pill"><span data-lang="fr">Education Management</span><span data-lang="en">Education Management</span><span data-lang="ar">إدارة التعليم</span></span>
+      <div class="pill-list" id="training-category-list">
+        <button type="button" class="pill pill-selectable active" data-category="it" data-title-fr="IT" data-title-en="IT" data-title-ar="تقنيات المعلومات" data-desc-fr="Formation pratique sur les outils numériques, la maintenance et l’adaptation aux environnements technologiques." data-desc-en="Practical training on digital tools, support systems and adaptation to modern technological environments." data-desc-ar="تدريب عملي على الأدوات الرقمية وأنظمة الدعم والتكيف مع البيئات التكنولوجية الحديثة.">
+          <span data-lang="fr">IT</span><span data-lang="en">IT</span><span data-lang="ar">تقنيات المعلومات</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="marketing" data-title-fr="Marketing" data-title-en="Marketing" data-title-ar="التسويق" data-desc-fr="Développez vos compétences pour créer des stratégies de marque, clientèle et communication." data-desc-en="Build your skills to create strong brand, customer and communication strategies." data-desc-ar="طور مهاراتك لإنشاء استراتيجيات قوية للعلامة والعميل والتواصل.">
+          <span data-lang="fr">Marketing</span><span data-lang="en">Marketing</span><span data-lang="ar">التسويق</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="digital-marketing" data-title-fr="Digital Marketing" data-title-en="Digital Marketing" data-title-ar="التسويق الرقمي" data-desc-fr="Maîtrisez les réseaux sociaux, le référencement, l’analyse et les campagnes payantes." data-desc-en="Master social media, SEO, analytics and paid campaign management." data-desc-ar="أتقن التواصل الاجتماعي وسيو والتحليلات وإدارة الحملات المدفوعة.">
+          <span data-lang="fr">Digital Marketing</span><span data-lang="en">Digital Marketing</span><span data-lang="ar">التسويق الرقمي</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="import-export" data-title-fr="Import / export" data-title-en="Import / export" data-title-ar="الاستيراد/التصدير" data-desc-fr="Découvrez les bases du commerce international, de la logistique et des procédures douanières." data-desc-en="Learn the basics of international trade, logistics and customs procedures." data-desc-ar="تعرف على أساسيات التجارة الدولية والخدمات اللوجستية والإجراءات الجمركية.">
+          <span data-lang="fr">Import / export</span><span data-lang="en">Import / export</span><span data-lang="ar">الاستيراد/التصدير</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="business-development" data-title-fr="Business Development" data-title-en="Business Development" data-title-ar="تنمية الأعمال" data-desc-fr="Renforcez vos compétences pour identifier des opportunités et développer des partenariats durables." data-desc-en="Strengthen your skills to identify opportunities and build lasting partnerships." data-desc-ar="قوّ من مهاراتك لتحديد الفرص وبناء شراكات مستدامة.">
+          <span data-lang="fr">Business Development</span><span data-lang="en">Business Development</span><span data-lang="ar">تنمية الأعمال</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="hr" data-title-fr="HR" data-title-en="HR" data-title-ar="الموارد البشرية" data-desc-fr="Acquérez des bases solides en recrutement, gestion du personnel et développement d’équipe." data-desc-en="Gain solid foundations in recruitment, people management and team development." data-desc-ar="احصل على أساسيات قوية في التوظيف وإدارة الأفراد وتنمية الفريق.">
+          <span data-lang="fr">HR</span><span data-lang="en">HR</span><span data-lang="ar">الموارد البشرية</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="supply-chain" data-title-fr="Supply chain" data-title-en="Supply chain" data-title-ar="سلسلة الإمداد" data-desc-fr="Apprenez à piloter la logistique, les stocks et l’optimisation des opérations." data-desc-en="Learn to manage logistics, stock and operation optimisation effectively." data-desc-ar="تعلم إدارة اللوجستيات والمخزون وتحسين العمليات بفعالية.">
+          <span data-lang="fr">Supply chain</span><span data-lang="en">Supply chain</span><span data-lang="ar">سلسلة الإمداد</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="administration" data-title-fr="Administration &amp; Secretary" data-title-en="Administration & Secretary" data-title-ar="الإدارة والأمانة" data-desc-fr="Développez des compétences clés en organisation, communication et gestion administrative." data-desc-en="Develop key skills in organisation, communication and administrative management." data-desc-ar="طور مهارات أساسية في التنظيم والتواصل والإدارة الإدارية.">
+          <span data-lang="fr">Administration &amp; Secretary</span><span data-lang="en">Administration & Secretary</span><span data-lang="ar">الإدارة والأمانة</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="ai" data-title-fr="AI" data-title-en="AI" data-title-ar="الذكاء الاصطناعي" data-desc-fr="Découvrez les concepts de l’intelligence artificielle et ses applications concrètes." data-desc-en="Discover AI concepts and their practical applications in real-world contexts." data-desc-ar="اكتشف مفاهيم الذكاء الاصطناعي وتطبيقاته العملية في الواقع.">
+          <span data-lang="fr">AI</span><span data-lang="en">AI</span><span data-lang="ar">الذكاء الاصطناعي</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="education-training" data-title-fr="Education training (teacher training)" data-title-en="Education training (teacher training)" data-title-ar="تكوين تربوي (تكوين المعلمين)" data-desc-fr="Préparez les enseignants à mieux accompagner les apprenants et structurer leurs pratiques pédagogiques." data-desc-en="Prepare educators to support learners better and structure their teaching practice." data-desc-ar="جهّز المعلمين ليؤدوا دورهم بشكل أفضل في دعم المتعلمين وتنظيم ممارساتهم التربوية.">
+          <span data-lang="fr">Education training (teacher training)</span><span data-lang="en">Education training (teacher training)</span><span data-lang="ar">تكوين تربوي (تكوين المعلمين)</span>
+        </button>
+        <button type="button" class="pill pill-selectable" data-category="education-management" data-title-fr="Education Management" data-title-en="Education Management" data-title-ar="إدارة التعليم" data-desc-fr="Apprenez à gérer des établissements, des équipes pédagogiques et des projets éducatifs." data-desc-en="Learn to manage schools, teaching teams and education-focused projects." data-desc-ar="تعلم إدارة المؤسسات التعليمية والفرق التربوية والمشاريع التعليمية.">
+          <span data-lang="fr">Education Management</span><span data-lang="en">Education Management</span><span data-lang="ar">إدارة التعليم</span>
+        </button>
+      </div>
+      <div class="category-card" id="category-detail-card" aria-live="polite">
+        <div class="category-card-title" id="category-card-title"></div>
+        <p id="category-card-desc"></p>
       </div>
     </div>
 
