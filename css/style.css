@@ -496,6 +496,57 @@ html[data-active-lang="ar"] span[data-lang="ar"]{display:inline;}
 .about-copy h2 {
   margin-bottom: 20px;
 }
+.founder-message {
+  margin: 24px 0 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(30, 77, 183, 0.05));
+  box-shadow: var(--shadow-sm);
+}
+
+.founder-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-bottom: 10px;
+}
+
+.founder-label::before {
+  content: "✦";
+  color: var(--gold);
+}
+
+.founder-quote blockquote {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--navy);
+  font-style: italic;
+}
+
+.founder-signature strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.founder-signature span {
+  font-size: .86rem;
+  color: var(--text-muted);
+}
+
+
+
+
+
+
 
 .about-features {
   display: grid;
